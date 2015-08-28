@@ -1,0 +1,14 @@
+{
+  "name": "cmus-mediakeys",
+  "version": "1.0.0",
+  "description": "bind global media keys to cmus commands",
+  "main": "mediakeys",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander Zhukov",
+  "license": "MIT",
+  "dependencies": {
+    "mediakeys": "^0.1.1"
+  }
+}
