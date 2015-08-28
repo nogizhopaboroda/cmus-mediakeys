@@ -1,3 +1,32 @@
 #!/usr/bin/env node
 
-console.log('ok');
+var mediakeys = require('mediakeys').listen();
+var spawn = require("child_process").spawn;
+
+function send_command(command){
+  var cmus_remote = spawn("cmus-remote", ["-C"].concat(command));
+
+  cmus_remote.stdout.on("data", function (data) {
+    console.log("stdout: " + data, "stdout");
+  });
+
+  cmus_remote.stderr.on("data", function (data) {
+    console.log("stderr: " + data, "warning");
+  });
+
+  cmus_remote.on("close", function (code) {});
+}
+
+
+mediakeys.on('play', function () {
+    console.log('player play/pause');
+    send_command('player-pause');
+})
+mediakeys.on('next', function () {
+    console.log('player next');
+    send_command('player-next');
+})
+mediakeys.on('back', function () {
+    console.log('player back');
+    send_command('player-prev');
+})
