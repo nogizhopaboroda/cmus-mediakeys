@@ -11,3 +11,11 @@ $ npm install
 $ # run mediakeys handler
 $ ./mediakeys
 ```
+
+## known issues
+
+On Mac OS X, node v4 `npm install` fails when installs "mediakeys" module.
+
+Issues described [here](https://github.com/nogizhopaboroda/cmus-mediakeys/issues/1) and [here]( https://github.com/tcr/mediakeys/issues/3)
+
+Known workaround is downgrading node to version 0.10
