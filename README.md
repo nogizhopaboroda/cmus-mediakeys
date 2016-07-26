@@ -22,3 +22,6 @@ Known workarounds:
 
 - downgrading node to version 0.10
 - updating XCode to version >=7
+
+
+If you like this project, check out also cmus plugin manager [cmus-bundler](https://github.com/nogizhopaboroda/cmus-bundler)
